@@ -1,16 +1,11 @@
 
 #include <stdio.h>
 
-int isSorted = 0;
-
 int bubbleSort(int arr[], int size){
     
     int swap;
     
     for(int i = 0; i < size - 1; i++){
-        
-        printf("\n\nThe number of passes is %d\n",i+1);
-        isSorted = 1;
         
         for(int j = 0; j < size - 1 - i; j++){
             
@@ -19,15 +14,11 @@ int bubbleSort(int arr[], int size){
             swap = arr[j];
             arr[j] = arr[j+1];
             arr[j+1] = swap; 
-            isSorted = 0;
-                
+            
             }
             
         }
         
-        if(isSorted){
-            return 0;
-        }
     }
     
 }
@@ -55,7 +46,7 @@ int main()
     int arr[100];
     int size = 5;
     
-    printf("Input Element\n");
+    printf("Input Element: ");
     inputArr(arr,size);
     
     printf("The Array Before Sorted\n");
