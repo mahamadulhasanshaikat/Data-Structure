@@ -5,9 +5,9 @@ int items[SIZE], front = -1, rear = -1;
 
 void enQueue(int value) {
     
-  if (rear == SIZE - 1)
+  if (rear == SIZE - 1){
     printf("\n Queue is Full! ");
-  else {
+  }else {
     if (front == -1)
       front = 0;
     rear++;
@@ -17,21 +17,22 @@ void enQueue(int value) {
 }
 
 void deQueue() {
-  if (front == -1)
+  if (front == -1){
     printf("\n Queue is Empty! ");
-  else {
+  }else {
     printf("\n Deleted : %d", items[front]);
     front++;
-    if (front > rear)
+    if (front > rear){
       front = rear = -1;
+    }
   }
 }
 
 void display() {
-  if (rear == -1)
+  if (rear == -1){
     printf("\n Queue is Empty! ");
     
-  else {
+  }else {
     printf("\n Queue elements are: ");
     for (int i = front; i <= rear; i++)
     
