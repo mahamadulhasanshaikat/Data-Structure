@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int bubbleSort(int arr[], int size){
+void bubbleSort(int arr[], int size){
     
     int swap;
     
